@@ -13,6 +13,7 @@ async function main() {
      */
     const client = new MongoClient(uri);
 
+    /* ready to connect to database and print out the list of tables */
     try {
         // Connect to the MongoDB cluster
         await client.connect();
