@@ -17,7 +17,7 @@ async function main() {
     try {
         // Connect to the MongoDB cluster
         await client.connect();
-        console.log("Connected to MongoDB!!!");
+        console.log("Connected to MongoDB demo");
 
         // Make the appropriate DB calls
         await listDatabases(client);
