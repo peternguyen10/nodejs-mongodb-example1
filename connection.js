@@ -17,7 +17,7 @@ async function main() {
     try {
         // Connect to the MongoDB cluster
         await client.connect();
-        console.log("Connected to MongoDB!");
+        console.log("Connected to MongoDB!!!");
 
         // Make the appropriate DB calls
         await listDatabases(client);
@@ -39,6 +39,6 @@ main().catch(console.error);
 async function listDatabases(client) {
     databasesList = await client.db().admin().listDatabases();
 
-    console.log("Databases:");
+    console.log("Here are the databases:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
