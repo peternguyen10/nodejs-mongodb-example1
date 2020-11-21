@@ -9,12 +9,11 @@ services:
         # [Choice] Node.js version: 14, 12, 10
         VARIANT: 14
         # On Linux, you may need to update USER_UID and USER_GID below if not your local UID is not 1000.
-        USER_UID: 1000
-        USER_GID: 1000
+        USER_UID: 1010
+        USER_GID: 1010
 
     volumes:
-      - /home/nguyen/workspace/
-      #- ..:/workspace:cached
+      - nodeworkspaceFolder:/workspace/nodejs/nodejs-mongodb-example1
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
@@ -45,3 +44,4 @@ services:
 
 volumes:
   mongodb-data:
+  nodeworkspaceFolder:  
