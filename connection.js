@@ -40,6 +40,6 @@ async function listDatabases(client) {
     databasesList = await client.db().admin().listDatabases();
 
     console.log("Here are the databases:");
-    console.log("Javascript on server side using NodeJS framework:");
+    console.log("Javascript on server side using NodeJS framework on remote host:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
